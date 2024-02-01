@@ -26,6 +26,15 @@ document.getElementById('withdraw-btn').addEventListener('click',function(){
 
     //withdraw amount
 
+    const withdrawUser = document.getElementById('withdraw');
+    const withdrawTotal = withdrawUser.innerText;
+    const newWithdraw = parseFloat(withdrawTotal);
+
+    const newWithdrawTotal = newWithdraw + previousWithdraw;
+    withdrawUser.innerText = newWithdrawTotal;
+
+
+
     const totalAmount = document.getElementById('total-amount');
     const withdrawAmount = totalAmount.innerText;
     const amountWithdraw = parseFloat(withdrawAmount);
